@@ -1,0 +1,154 @@
+/*
+ * SITE HEADER 
+-------------------------------*/
+
+header.site-header{
+	background: rgba(0,0,0,0);
+	left: 0;
+	position: absolute;
+	top: 0;
+	-webkit-transition: 0.2s ease;
+	   -moz-transition: 0.2s ease;
+	    -ms-transition: 0.2s ease;
+	     -o-transition: 0.2s ease;
+	        transition: 0.2s ease;
+	width: 100%;
+	z-index: 9;
+}
+
+header.site-header.sticky{
+	background: #000;
+	position: fixed;
+}
+
+header.site-header .container > .row {
+	-webkit-align-items: center;
+	        align-items: center;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+header.site-header .site-logo{
+	-webkit-flex-grow: 1;
+	        flex-grow: 1;
+}
+
+header.site-header .site-logo a{
+	color: #FFF;
+	display: inline-block;
+	text-decoration: none;
+}
+
+header.site-header .site-nav{
+	-webkit-flex-grow: 3;
+	        flex-grow: 3;
+}
+
+header.site-header .site-nav ul{
+	margin: 0;
+	padding: 0;
+	text-align: right;
+}
+
+header.site-header .site-nav ul li {
+	display: inline-block;
+	list-style: none;
+}
+
+header.site-header .site-nav ul li a{
+	color: #fff;
+	display: block;
+	font-size: 19px;
+	margin: 0 15px;
+	text-decoration: none;
+	position: relative;
+}
+
+header.site-header .site-nav ul li:first-child a{
+	margin-left: 0;
+}
+
+header.site-header .site-nav ul li:last-child a{
+	margin-right: 0;
+}
+
+header.site-header .site-nav ul li a:after{
+	background: #fff;
+	bottom: 0;
+	content: '';
+	height: 1px;
+	left: 0;	
+	position: absolute;
+	width: 0;
+	-webkit-transition: width 0.1s ease-in-out;
+	   -moz-transition: width 0.1s ease-in-out;
+	    -ms-transition: width 0.1s ease-in-out;
+	     -o-transition: width 0.1s ease-in-out;
+	        transition: width 0.1s ease-in-out;
+}
+
+header.site-header .site-nav ul li a:hover:after{
+	width: 100%;
+}
+
+/*
+ * SLANTED SECTION
+-------------------------------*/
+
+.slanted:after {
+    background: #FFF;
+    bottom: -35px;
+	content: '';
+    height: 70px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    -webkit-transform: skewY(-2deg);
+       -moz-transform: skewY(-2deg);
+        -ms-transform: skewY(-2deg);
+         -o-transform: skewY(-2deg);
+            transform: skewY(-2deg);
+}
+
+
+/*
+ * BANNER
+-------------------------------*/
+
+.site-banner{
+	overflow: hidden;
+	position: relative;
+}
+
+#hero {
+	height: 100vh;
+}
+
+
+#hero .item{
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	height: 100vh;
+	position: relative;
+	width: 100%;
+}
+
+#hero .item:before{
+	background: rgba(0,0,0,0.35);
+	content: '';
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
