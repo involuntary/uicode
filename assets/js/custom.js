@@ -14,6 +14,12 @@ jQuery(function($){
         } else {
             $( '.site-header' ).removeClass( 'sticky' );
         }
+
+        if (scroll > 400) {
+            $('#back-to-top').addClass('show');
+        } else {
+            $('#back-to-top').removeClass('show');
+        }
     });
 
     $('#back-to-top').on('click', function (e) {
@@ -22,7 +28,6 @@ jQuery(function($){
             scrollTop: 0
         }, 700);
     });
-
 
     // Parallax effect
     $window = $(window);
