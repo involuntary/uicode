@@ -1,5 +1,36 @@
 /*
- * SITE HEADER 
+ * GLOBAL STYLES
+-------------------------------*/
+
+.primary-btn {
+    background: #000;
+    border: 1px solid #000;
+    color: #fff;
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 15px;
+    position: relative;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+         -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+
+.primary-btn:hover{
+    background: #424242;
+    border-color: #424242;
+    color: #fff
+}
+
+.no-padding{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/*
+ * SITE HEADER
 -------------------------------*/
 
 header.site-header{
@@ -13,7 +44,7 @@ header.site-header{
 	     -o-transition: 0.2s ease;
 	        transition: 0.2s ease;
 	width: 100%;
-	z-index: 9;
+	z-index: 11;
 }
 
 header.site-header.sticky{
@@ -49,13 +80,13 @@ header.site-header .site-nav{
 
 header.site-header .site-nav ul{
 	margin: 0;
+	list-style: none;
 	padding: 0;
 	text-align: right;
 }
 
 header.site-header .site-nav ul li {
 	display: inline-block;
-	list-style: none;
 }
 
 header.site-header .site-nav ul li a{
@@ -80,7 +111,7 @@ header.site-header .site-nav ul li a:after{
 	bottom: 0;
 	content: '';
 	height: 1px;
-	left: 0;	
+	left: 0;
 	position: absolute;
 	width: 0;
 	-webkit-transition: width 0.1s ease-in-out;
@@ -95,11 +126,11 @@ header.site-header .site-nav ul li a:hover:after{
 }
 
 /*
- * SLANTED SECTION
+ * GLOBAL SECTION STYLES
 -------------------------------*/
 
 .slanted:after {
-    background: #FFF;
+    background: #f6f7fa;
     bottom: -35px;
 	content: '';
     height: 70px;
@@ -107,12 +138,47 @@ header.site-header .site-nav ul li a:hover:after{
     position: absolute;
     right: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 8;
     -webkit-transform: skewY(-2deg);
        -moz-transform: skewY(-2deg);
         -ms-transform: skewY(-2deg);
          -o-transform: skewY(-2deg);
             transform: skewY(-2deg);
+}
+
+.section-title{
+	display: block;
+	position: relative;
+	text-align: center;
+}
+
+.section-title .heading{
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	   -moz-transform: translate(-50%,-50%);
+	    -ms-transform: translate(-50%,-50%);
+	     -o-transform: translate(-50%,-50%);
+	        transform: translate(-50%,-50%);
+	z-index: 7;
+}
+
+.section-title .heading h1{
+	color: #dddddd;
+	font-size: 80px;
+}
+
+.section-title .sub-heading{
+	position: relative;
+	text-align: center;
+	z-index: 8;
+}
+
+.section-title .sub-heading h2{
+	color: #000;
+	font-size: 40px;
+	margin: 0;
 }
 
 
@@ -125,8 +191,12 @@ header.site-header .site-nav ul li a:hover:after{
 	position: relative;
 }
 
+.site-banner.slanted:after{
+    background: #f6f7fa;
+}
+
 #hero {
-	height: 100vh;
+	height: calc(100vh - 50px);
 }
 
 
@@ -136,7 +206,7 @@ header.site-header .site-nav ul li a:hover:after{
 	-webkit-background-size: cover;
 	     -o-background-size: cover;
 	        background-size: cover;
-	height: 100vh;
+	height: calc(100vh - 50px);
 	position: relative;
 	width: 100%;
 }
@@ -152,3 +222,212 @@ header.site-header .site-nav ul li a:hover:after{
 	z-index: 1;
 }
 
+
+/*
+ * ABOUT
+-------------------------------*/
+
+.about {
+	background: #f6f7fa;
+	overflow: hidden;
+	padding: 110px 0;
+    position: relative;
+}
+
+.about.slanted:after{
+    background: #fff;
+}
+
+.about-wrapper{
+    display: table;
+    height: 500px;
+	position: relative;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.left-wrapper{
+	display: table-cell;
+}
+
+.about-title-wrapper{
+    display: table;
+	height: 100%;
+	margin-top: -60px;
+    padding: 60px;
+	position: relative;
+    width: 100%;
+	z-index: 5;
+}
+
+.about-title-wrapper:before{
+    -webkit-animation: gradiantAnimation 12s ease infinite;
+	   -moz-animation: gradiantAnimation 12s ease infinite;
+	     -o-animation: gradiantAnimation 12s ease infinite;
+	        animation: gradiantAnimation 12s ease infinite;
+    background: linear-gradient(298deg, #37a187, #72b659, #01c2ec);
+    background: -o-linear-gradient(298deg, #37a187, #72b659, #01c2ec);
+    background: -ms-linear-gradient(298deg, #37a187, #72b659, #01c2ec);
+    background: -moz-linear-gradient(298deg, #37a187, #72b659, #01c2ec);
+    -webkit-background-size: 600% 600%;
+         -o-background-size: 600% 600%;
+            background-size: 600% 600%;
+	content: "";
+    height: 100%;
+    left: 0px;
+    opacity: .5;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 3;
+}
+
+.about-title-wrapper .title{
+    display: table-cell;
+    vertical-align: middle;
+
+}
+
+.about-title-wrapper .title h1{
+    color: #fff;
+    font-size: 40px;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    z-index: 5;
+}
+
+.right-wrapper{
+	display: table-cell;
+    vertical-align: top;
+}
+
+.about-content-wrapper{
+	background: #fff;
+    -webkit-box-shadow: 2px 3px 16px #d9d9d9;
+            box-shadow: 2px 3px 16px #d9d9d9;
+	height: 100%;
+	margin-left: -30px;
+    padding: 60px;
+	position: relative;
+	z-index: 6;
+}
+
+.about-content-wrapper p{
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 30px;
+}
+
+.about-content-wrapper a{
+    text-decoration: none;
+}
+
+/*
+ * SERVICES
+-------------------------------*/
+
+.services {
+    overflow: hidden;
+    padding: 50px 0;
+    position: relative;
+}
+
+.service-info{
+    background: #818181;
+    padding: 30px 15px;
+}
+
+.service-icon,
+.service-title,
+.service-content {
+    overflow: hidden;
+}
+
+.service-title h3{
+    color: #fff;
+    margin: 0;
+}
+
+.service-content p{
+    color: #fff;
+    margin: 0;
+}
+
+.bg-app{
+    background: #707070;
+}
+
+.bg-design{
+    background: #5f5f5f;
+}
+
+.bg-web{
+    background: #4e4e4e;
+}
+
+.bg-wp{
+    background: #696969;
+}
+
+.bg-develop{
+    background: #424242;
+}
+
+
+
+
+
+
+/*
+ * KEYFRAMES
+-------------------------------*/
+
+@-webkit-keyframes gradiantAnimation {
+    0%{
+    	background-position:0% 51%
+	}
+    50%{
+    	background-position:100% 50%
+	}
+    100%{
+    	background-position:0% 51%
+	}
+}
+
+@-moz-keyframes gradiantAnimation {
+    0%{
+    	background-position:0% 51%
+	}
+    50%{
+    	background-position:100% 50%
+	}
+	100%{
+    	background-position:0% 51%
+	}
+}
+
+@-o-keyframes gradiantAnimation {
+    0%{
+    	background-position:0% 51%
+	}
+    50%{
+    	background-position:100% 50%
+	}
+    100%{
+    	background-position:0% 51%
+	}
+}
+
+@keyframes gradiantAnimation {
+    0%{
+    	background-position:0% 51%
+	}
+    50%{
+    	background-position:100% 50%
+    }
+
+    100%{
+    	background-position:0% 51%
+	}
+}
