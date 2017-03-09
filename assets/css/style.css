@@ -514,6 +514,110 @@ header.site-header .site-nav ul li a:hover:after{
 	position: relative;
 }
 
+.portfolio .section-title{
+    margin-bottom: 35px;
+}
+
+.portfolio-filter{
+    clear: both;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.portfolio-filter ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.portfolio-filter ul li{
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+}
+
+.portfolio-filter ul li a,
+.portfolio-filter ul li a:link,
+.portfolio-filter ul li a:visited{
+    color: #ddd;
+    position: relative;
+    text-decoration: none;
+}
+
+.portfolio-filter ul li:first-child{
+    margin-left: 0;
+}
+
+.portfolio-filter ul li:last-child{
+    margin-right: 0;
+}
+
+.portfolio-filter ul li a.filter-active{
+    color:#000;
+}
+
+.portfolio-filter ul li:after{
+    background: #ddd;
+    content: '';
+    height: 100%;
+    position: absolute;
+    right: -10px;
+    width: 2px;
+    -webkit-transform: rotate(20deg);
+       -moz-transform: rotate(20deg);
+        -ms-transform: rotate(20deg);
+         -o-transform: rotate(20deg);
+            transform: rotate(20deg);
+}
+
+.portfolio-filter ul li:last-child:after{
+    content: none;
+}
+
+.portfolio-filter ul li a:after{
+    background: #000;
+    bottom: 0;
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 0;
+    -webkit-transition: width 0.3s ease-in-out;
+       -moz-transition: width 0.3s ease-in-out;
+        -ms-transition: width 0.3s ease-in-out;
+         -o-transition: width 0.3s ease-in-out;
+            transition: width 0.3s ease-in-out;
+}
+
+.portfolio-filter ul li a.filter-active:after{
+    content: none;
+}
+
+.portfolio-filter ul li a:hover:after{
+    width: 100%;
+}
+
+.showcase {
+    display: block;
+    width: 100%;
+}
+
+.showcase .portfolio-item{
+    float: left;
+    width: 33.33%;
+}
+
+
+.showcase .portfolio-item img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
 /*
  * BACK TO UP
 -------------------------------*/
@@ -649,4 +753,4 @@ header.site-header .site-nav ul li a:hover:after{
 		transform: scale(1.5);
 		opacity: 0;
 	}
-} 
+}
