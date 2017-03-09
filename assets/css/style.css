@@ -510,7 +510,7 @@ header.site-header .site-nav ul li a:hover:after{
 
 .portfolio{
 	background: #F8F8F8;
-	padding: 35px 0 60px 0;
+	padding: 35px 0 120px 0;
 	position: relative;
 }
 
@@ -617,7 +617,36 @@ header.site-header .site-nav ul li a:hover:after{
     height: auto;
 }
 
+/*
+ * TESTIMONIALS
+-------------------------------*/
 
+.testimonials{
+    padding: 35px 0 60px 0;
+    position: relative;
+    
+}
+
+/*
+ * FOOTER
+-------------------------------*/
+
+footer.site-footer{
+    overflow: hidden;
+    padding: 35px 0 60px 0;
+    position: relative;
+}
+
+.site-footer.slanted-before{
+    background: #777;
+}
+
+
+.footer-widget{
+    width: 33.33%;
+    float: left;
+    background: #FFF;
+}
 /*
  * BACK TO UP
 -------------------------------*/
