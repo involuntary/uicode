@@ -55,7 +55,7 @@ jQuery(document).ready( function() {
     var isocontainer = jQuery('.showcase');
 
     isocontainer.imagesLoaded( function() {
-      isocontainer.masonry({
+      isocontainer.isotope({
         itemSelector: '.portfolio-item',
       })
     });
